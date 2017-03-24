@@ -1,25 +1,40 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
-
 <tiles:insertDefinition name="defaultTemplate">
 	<tiles:putAttribute name="body">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
- <div style="width:500px; margin:0 auto;">
-        <center>
-    <div class="row">
-<!--        <div class="col s12 m6">-->
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text"> <span class="card-title">Forgot Password</span>
-                    <p>Enter the answer to your security question provide below</p>
-                    <br>
-                    <p>Here is the question</p>
-                </div>
-                <div class="card-action"> <a href="#">Submit</a> </div>
-            </div>
-<!--        </div>-->
-    </div>
-</center>
+
+<div>
+<h3>Forgot Password</h3><br>
+		<body>
+        <form align="center" action="login.jsp">
+            <name="login" value="LOGIN ID"><b>
+            Login Name: <br></b><input type="text" name="id" size="20"><br><br>
+            <name="loginname" value="LOGIN"><b>
+             Secret Question :</b><br><input type="text" name="secretquestion" size="20"><br><br><b>
+             Secret Answer :<br></b><input type="text" name="secretanswer" size="20"><br><br>
+                <head>
+<style>
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+                <input type="submit" class="button" name="submit" value="Login" >
+            
+                    
+        </form>
+    </body> 
+
 </div>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	</tiles:putAttribute>
