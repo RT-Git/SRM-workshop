@@ -1,3 +1,15 @@
+<style>
+.blacktext {
+        color: black;
+}
+</style>
 <div id="footerblock">
-	<p>&copy; Tradr. All rights reserved.</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p class="blacktext"> Tradr. All rights reserved.</p>
 </div>

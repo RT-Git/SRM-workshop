@@ -20,7 +20,7 @@
 <div>
 <h1>Registration</h1>
 <form method="get" action="login">
-<p><b>Name:<br>
+<p><b>Name:</b><br>
 <input type="text" name="name"></p>
 
 <p>Email Id:<br>
@@ -43,6 +43,7 @@
 
 <input type="submit" class="button" name="register" value="Register">
 </form>
+</div>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	</tiles:putAttribute>
 </tiles:insertDefinition>

@@ -7,7 +7,7 @@
 		<body>
         <form align="center" method="get"action="login">
             <name="login" value="LOGIN ID"><b>
-                User Name: </b><input type="text" name="id" size="20"><br><br>
+                User Name: </b><input type="text" name="id" size="20"z><br><br>
             <name="login" value="LOGIN"><b>
                 Password: </b><input type="password" name="pwd" size="20"><br><br>
                 <head>

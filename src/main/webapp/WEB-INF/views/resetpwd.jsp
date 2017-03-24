@@ -29,6 +29,7 @@
 
 <input type="submit" name="setpass" class="button" value="Set Password">
 </form>
+</div>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	</tiles:putAttribute>
 </tiles:insertDefinition>
