@@ -27,7 +27,12 @@ public class HomeController
 		HomeController.logger.info("Logged");
 		return "home";
 	}
-	
+	@RequestMapping(value = {"/register" }, method = RequestMethod.GET)
+	public String register(final Locale locale, final Model model)
+	{
+		HomeController.logger.info("Logged");
+		return "register";
+	}
 	/**
 	 * 
 	 * @param locale
@@ -40,8 +45,13 @@ public class HomeController
 		HomeController.logger.info("Logged");
 
 		return "login";
-	}
+	}@RequestMapping(value = "/forgotpwd", method = RequestMethod.GET)
+	public String forgotpwd(final Locale locale, final Model model)
+	{
+		HomeController.logger.info("Logged");
 
+		return "forgotpwd";
+	}
 	/**
 	 * 
 	 * @param locale
@@ -56,4 +66,3 @@ public class HomeController
 		return "about";
 	}
 }
-
