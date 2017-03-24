@@ -9,7 +9,7 @@
 <p><b>Name:<br>
 <input type="text" name="name"></p>
 
-<p>Login Name:<br>
+<p>Email Id:<br>
 <input type="text" name="lname"></p>
 
 <p>Login Password:<br>

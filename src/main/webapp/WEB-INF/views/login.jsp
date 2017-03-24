@@ -33,7 +33,7 @@
                 <input type="submit" class="button" name="submit" value="Login" >
                 
                 <a href=register class="button">Register</a><br>
-                <a href="forgetpwd.jsp" class="button">Forgot Password</a>                
+                <a href="forgotpwd" class="button">Forgot Password</a>                
         </form>
     </body> 
 
