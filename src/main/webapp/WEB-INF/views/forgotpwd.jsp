@@ -5,7 +5,7 @@
 <div>
 <h3>Forgot Password</h3><br>
 		<body>
-        <form align="center" action="login.jsp">
+        <form align="center" action="login">
             <name="login" value="LOGIN ID"><b>
             Login Name: <br></b><input type="text" name="id" size="20"><br><br>
             <name="loginname" value="LOGIN"><b>
