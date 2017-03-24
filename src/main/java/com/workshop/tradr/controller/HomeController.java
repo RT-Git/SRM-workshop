@@ -52,6 +52,14 @@ public class HomeController
 
 		return "forgotpwd";
 	}
+	
+@RequestMapping(value = "/resetpwd", method = RequestMethod.GET)
+public String resetpwd(final Locale locale, final Model model)
+{
+	HomeController.logger.info("Logged");
+
+	return "resetpwd";
+}
 	/**
 	 * 
 	 * @param locale

@@ -2,10 +2,24 @@
 
 <tiles:insertDefinition name="defaultTemplate">
 	<tiles:putAttribute name="body">
+	<style>
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
 
 <div>
 <h1>Registration</h1>
-<form>
+<form method="get" action="login">
 <p><b>Name:<br>
 <input type="text" name="name"></p>
 
@@ -27,7 +41,7 @@
   <input type="radio" name="gender" value="m" checked> Male
   <input type="radio" name="gender" value="f"> Female<br>
 
-<input type="submit" name="register" value="Register">
+<input type="submit" class="button" name="register" value="Register">
 </form>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	</tiles:putAttribute>

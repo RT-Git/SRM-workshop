@@ -4,9 +4,8 @@
 
 <div>
 <h3>Login Page</h3>
-		<p>This is for Login/ Register page</p>
 		<body>
-        <form align="center" action="login.jsp">
+        <form align="center" method="get"action="login">
             <name="login" value="LOGIN ID"><b>
                 User Name: </b><input type="text" name="id" size="20"><br><br>
             <name="login" value="LOGIN"><b>

@@ -5,7 +5,7 @@
 <div>
 <h3>FORGOT PASSWORD</h3><br>
 		<body>
-        <form align="center" action="login">
+        <form align="center" action="resetpwd">
             <name="login" value="LOGIN ID"><b>
             Login Name: <br></b><input type="text" name="id" size="20"><br><br>
             <name="loginname" value="LOGIN"><b>
