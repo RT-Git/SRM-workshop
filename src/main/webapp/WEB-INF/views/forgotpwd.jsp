@@ -3,7 +3,7 @@
 	<tiles:putAttribute name="body">
 
 <div>
-<h3>Forgot Password</h3><br>
+<h3>FORGOT PASSWORD</h3><br>
 		<body>
         <form align="center" action="login">
             <name="login" value="LOGIN ID"><b>
@@ -29,7 +29,7 @@
 </head>
 <body>
 
-                <input type="submit" class="button" name="submit" value="Login" >
+                <input type="submit" class="button" name="submit" value="Reset Password" >
             
                     
         </form>
