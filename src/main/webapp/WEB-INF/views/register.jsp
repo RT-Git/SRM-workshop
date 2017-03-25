@@ -2,38 +2,52 @@
 
 <tiles:insertDefinition name="defaultTemplate">
 	<tiles:putAttribute name="body">
+	<style>
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
 
 <div>
-<h1>Registration</h1>
+<font size="6"><b>Registration Page</font> <br>
 <form action="register" method="post">
 <p>Name:<br>
 <input type="text" name="name"></p>
 
-<p>Email Id:<br>
-<input type="text" name="lname" value="email"></p>
+<p>Login Name:<br>
+<input type="text" name="lname" required></p>
 
 <p>Login Password:<br>
-<input type="text" name="lpassword"></p>
+<input type="password" name="lpassword" required></p>
 
 <p>Secret question:<br>
-<input type="text" name="secret_ques"></p>
+<input type="text" name="secret_ques" required></p>
 
 <p>Secret Answer:<br>
-<input type="text" name="answer"></p>
+<input type="password" name="answer" required></p>
 
 <p>Date of Birth:<br>
-<input type="text" name="dob"></p>
+<input type="date" name="dob" required></p>
 <p>Gender:<br>
-  <input type="text" name="gender" ></p>
-  <p>
-  household_id
+  <input type="radio" name="gender" value="m" checked> Male
+  <input type="radio" name="gender" value="f"> Female<br>
+  <p>Household Id:<br>
   <input type="text" name="house_id"></p>
   <p>
-  InvestId
+  Investment Id:<br>
   <input type="text" name="invest_id"></p>
 
- <input type="submit" name="register" value="Register"> 
-<!-- <a href="register" class="button">Register</a><br> -->
+ <input type="submit" name="register" class="button" value="Register"> 
+
 </form>
 </div>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

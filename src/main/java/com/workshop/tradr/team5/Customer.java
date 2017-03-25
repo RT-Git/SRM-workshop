@@ -1,7 +1,5 @@
 package com.workshop.tradr.team5;
 
-import java.sql.Date;
-
 public class Customer {
 	
 	public String customer_name, username, password, secretQ, secretA, invest_trader , gender , household_id, dob;
