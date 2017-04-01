@@ -40,12 +40,6 @@
 <p>Gender:<br>
   <input type="radio" name="gender" value="m" checked> Male
   <input type="radio" name="gender" value="f"> Female<br>
-  <p>Household Id:<br>
-  <input type="text" name="house_id"></p>
-  <p>
-  Investment Id:<br>
-  <input type="text" name="invest_id"></p>
-
  <input type="submit" name="register" class="button" value="Register"> 
 
 </form>

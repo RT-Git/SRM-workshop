@@ -40,6 +40,12 @@ public class HomeController
 		HomeController.logger.info("Logged");
 		return "register";
 	}
+	@RequestMapping(value = { "/buysell" }, method = RequestMethod.GET)
+	public String buysell(final Locale locale, final Model model)
+	{
+		HomeController.logger.info("Logged");
+		return "buysell";
+	}
 	
 	@RequestMapping(value = {"/","/register" }, method = RequestMethod.POST)
 	public String register(final Locale locale, final Model model,@RequestParam("name") String n1,
@@ -64,7 +70,7 @@ public class HomeController
 		
 		return "login";
 	}
-	
+
 	
 	/**
 	 * 
@@ -108,5 +114,15 @@ public class HomeController
 		HomeController.logger.info("Logged");
 
 		return "about";
+		
+	}
+	
+	@RequestMapping(value = "/balance", method = RequestMethod.GET)
+	public String balance(final Locale locale, final Model model)
+	{
+		HomeController.logger.info("Logged");
+
+		return "balance";
 	}
 }
+
