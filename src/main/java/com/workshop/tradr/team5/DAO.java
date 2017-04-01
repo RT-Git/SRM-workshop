@@ -1,13 +1,17 @@
 package com.workshop.tradr.team5;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
+
+import com.mysql.jdbc.Util;
 
 
 public class DAO {
@@ -79,6 +83,38 @@ public class DAO {
 	        } 
 	        
 	        return list;
+		}
+	 
+	 public int CreditOrDebitDB(CreditOrDebit obj) throws ClassNotFoundException  {		
+			
+			String dbUrl = "jdbc:mysql://localhost:3306/tradr?allowMultiQueries=true&useSSL=false";
+	        String dbClass = "com.mysql.jdbc.Driver";
+	        String userdb = "root" , passdb = "";
+	        java.sql.Date Date = new java.sql.Date(Calendar.getInstance().getTimeInMillis());
+	        
+	        
+	        try {
+	            
+	        	
+	        	Class.forName(dbClass);
+	            Connection con = DriverManager.getConnection(dbUrl, userdb, passdb); 
+	            Statement stmt = con.createStatement();
+	            String query = "INSERT into tradr.customer_cash VALUES(?,?,?,?,?)";
+	            PreparedStatement pst = con.prepareStatement(query);
+	            pst.setInt(1, Integer.parseInt(obj.customer_id));
+	            pst.setDate(2, Date);
+	            pst.setString(3, obj.option);
+	            pst.setString(4, "DEPOSIT");
+	            pst.setDouble(5 , Double.parseDouble(obj.debitorcredit));
+	            int i=pst.executeUpdate();
+	            con.close();
+	        
+	        }
+	        catch (SQLException e) {
+	                        e.printStackTrace();
+	        } 
+	        
+	        return 1;
 		}  
 	 
 	 public double getTotalAmount(int customer_id) throws ClassNotFoundException  {

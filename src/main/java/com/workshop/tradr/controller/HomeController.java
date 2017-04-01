@@ -71,7 +71,7 @@ public class HomeController
 		return "login";
 	}
 	
-	@RequestMapping(value = {"/creditordebit" }, method = RequestMethod.GET)
+	@RequestMapping(value = {"/","/creditordebit" }, method = RequestMethod.POST)
 	public String  CreditOrDebit(final Locale locale, final Model model, @RequestParam("customer_id") String id,
 			@RequestParam("name") String name,
 			@RequestParam("amount") String amount,
@@ -80,11 +80,30 @@ public class HomeController
 	{
 		HomeController.logger.info("Logged");
 		
+		System.out.println("Check999" );
+		
+		System.out.println("1 : " + id);
+		System.out.println("2 : " + name);
+		System.out.println("3 : " + amount);
+		System.out.println("4 : " + debitorcredit);
+		System.out.println("5 : " + option);
+		
+		com.workshop.tradr.team5.CreditOrDebit obj = new com.workshop.tradr.team5.CreditOrDebit(id , name, amount, debitorcredit, option);
 		
 		
 		
+		System.out.println("Check0" );
 		
+		if(option == "DEBIT" && Double.parseDouble(amount) < Double.parseDouble(debitorcredit))
+			return "DebitOrCredit_Team5";
 		
+		System.out.println("Check1" );
+		
+		DAO database = new DAO();
+		database.CreditOrDebitDB(obj);
+		
+		System.out.println("Check2" );
+			
 
 		return "DebitOrCredit_Team5";
 	}
@@ -100,7 +119,7 @@ public class HomeController
 		list = database.getCreditDebitDetails();
 		String toDisplay ="";
 		
-		toDisplay+="<form action=\"DebitOrCredit\" method=GET ";
+		toDisplay+="<form action=\"creditordebit\" method=\"POST\" ";
 		
 //		toDisplay +="<tr>";
 //		toDisplay+="<td>&nbsp;&nbsp;&nbsp;"+"Customer ID"+"</td>";
@@ -127,13 +146,13 @@ public class HomeController
 			toDisplay+="<td>&nbsp;&nbsp;&nbsp;"+obj.name+"</td>";
 			toDisplay+="<td>&nbsp;&nbsp;&nbsp;"+obj.amount+"</td>";
 			toDisplay+="<td> &nbsp;&nbsp;&nbsp; <input type=\"text\" name=\"debitorcredit\"/> </td>"
-						+"<td>&nbsp;&nbsp;&nbsp; <input type=\"radio\" name=\"option\" value=\"credit\">Credit</td>"
-						+"<td> &nbsp;&nbsp;&nbsp; <input type=\"radio\" name=\"option\" value=\"debit\">Debit</td>"
+						+"<td>&nbsp;&nbsp;&nbsp; <input type=\"radio\" name=\"option\" value=\"CREDIT\">Credit</td>"
+						+"<td> &nbsp;&nbsp;&nbsp; <input type=\"radio\" name=\"option\" value=\"DEBIT\">Debit</td>"
 						+"<td> &nbsp;&nbsp;&nbsp; <input type=\"submit\" value=\"Submit\" /></td>";			       
 			toDisplay +="<br><br></tr>";
-			toDisplay +="</form>";
-			
 		}
+		
+		toDisplay +="</form>";
 		
 		model.addAttribute("customer_amount",toDisplay);
 		return "DebitOrCredit_Team5";

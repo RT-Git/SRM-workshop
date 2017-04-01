@@ -14,18 +14,11 @@
     font-size: 14px;
     margin: 4px 2px;
     cursor: pointer;
-    
-
 }
 </style>
-<script>
-function myFunction() {
-    alert("Password changed");
-}
-</script>
 <div>
 <h1>Reset Password</h1>
-<form method="get" action="pwdchg" onsubmit="myFunction()">
+<form method="get" action="pwdchg">
 
 <p>Secret Question: ${str}</p>
 
